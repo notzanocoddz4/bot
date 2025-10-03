@@ -2,13 +2,11 @@ import discord
 from discord.ext import commands
 import os
 import aiohttp
-from keep_alive import keep_alive
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
 
 load_dotenv("token.env")
-keep_alive()
 
 MONGO_URL = os.getenv("MONGO_URL")
 client = MongoClient(MONGO_URL, server_api=ServerApi('1'))
